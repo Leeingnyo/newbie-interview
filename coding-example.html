@@ -1,0 +1,72 @@
+<!doctype>
+<head>
+  <meta charset="utf-8">
+  <title>시지온 면접</title>
+  <style>
+#comment-section {
+  width: 500px;
+}
+.comment-form {
+  border: 1px solid black;
+}
+.comment-form-textarea {
+  width: 100%;
+  min-height: 150px;
+}
+.comment-submit-button {
+  width: 80px;
+  height: 30px;
+  background: pink;
+  border: 0;
+  color: white;
+}
+#comment-list {
+  margin: 0;
+  padding: 0;
+}
+.comment {
+  list-style: none;
+}
+.comment img {
+  float: left;
+  margin-right: 16px;
+}
+.comment div {
+  float: left;
+  margin-right: 5px;
+}
+.comment p {
+  clear: both;
+  margin-top: 5px;
+}
+  </style>
+</head>
+<body>
+  <section id="comment-section">
+    <form id="form" class="comment-form" action="/somewhere" method="get">
+      <textarea class="comment-form-textarea"></textarea>
+      <button class="comment-submit-button" type="submit">작성</button>
+    </form>
+    <ul id="comment-list">
+      <li class="comment">
+        <img width="40xp" height=40px" src="https://www.buira.org/assets/images/shared/default-profile.png">
+        <div>작성자</div>
+        <time>2019-09-06</time>
+        <p>댓글 내용</p>
+      </li>
+    </ul>
+  </section>
+
+  <script>
+function addComment(content) {
+  return `
+  <li class="comment">
+    <img width="40xp" height=40px" src="https://www.buira.org/assets/images/shared/default-profile.png">
+    <div>작성자</div>
+    <time>2019-09-06</time>
+    <p>${content}</p>
+  </li>
+  `;
+}
+  </script>
+</body>
